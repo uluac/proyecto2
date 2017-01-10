@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Dancing Script', cursive;
+  color: black;
+}
+
+@keyframes intro {
+  0%{
+    margin-top: 150%;
+  }
+  60%{
+    margin-top: -5%;
+  }
+  100%{
+    margin-top: 0%;
+  }
+}
+@-webkit-keyframes intro {
+  0%{
+    margin-top: 150%;
+  }
+  60%{
+    margin-top: -5%;
+  }
+  100%{
+    margin-top: 0%;
+  }
+}
+
+@media screen and (max-width: 899px) {
+  body{
+    background-color: #02010a;
+  }
+  .contenido{
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  header{
+    background-color: #5b7989;
+    color: white;
+    padding: 1em;
+    border-radius: 10px 10px 0 0;
+    animation: intro 1s;
+    text-align: center;
+  }
+  header h1{
+    text-shadow: 0 0 2px #02010a;
+    color: white;
+  }
+  header a{
+    color: white;
+  }
+  nav{
+    font-size: 23px;
+  }
+  nav li{
+    display: inline-block;
+  }
+  section{background-color: #d5c75f;}
+  .active{text-decoration: none;}
+  .central{background-color: #82c3a6;}
+  .central img{
+    width: 80%;
+    margin: 2em 10%;
+  }
+  .secundario{
+    background-color: #d5c75f;
+    display: flex;
+    flex-flow: column;
+  }
+  .paisajes,.retratos{width: 100%; text-align: center;}
+  .paisajes img,.retratos img{
+    width: 80%;
+    margin: 1em 10%;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    border: 1px solid black;
+    box-shadow: 0 0 2px #02010a;
+  }
+  .paisajes img:hover{
+    transform: rotate(10deg);
+    box-shadow: 2px 2px 40px #82c3a6;
+    border: 2px solid #82c3a6;
+  }
+  .gallery{
+    display: flex;
+    flex-flow: column wrap;
+  }
+  .image{
+    width: 100%;
+  }
+  .image:nth-child(1) img{filter: blur(10px);}
+  .image:nth-child(2n+2) img{filter: grayscale(100%);}
+  .image:nth-child(3) img{filter: sepia(90%);}
+  .image img{
+    width: 80%;
+    margin: 1em 10%;
+  }
+  .retratos img:hover{
+    transform: translate(20px,-5px);
+    box-shadow: 2px 2px 40px #82c3a6;
+    border: 2px solid #82c3a6;
+  }
+  footer{
+    border-radius: 0 0 10px 10px;
+    background-color: #C6d5c5;
+    display: flex;
+    flex-flow: column wrap;
+  }
+  footer ul{
+    width: 80%;
+    margin: 10%;
+  }
+  footer ul li{
+    list-style: none;
+    font-size: 20px;
+  }
+  footer ul li:nth-of-type(1){
+    font-size: 30px;
+    font-weight: bold;
+  }
+  footer img{
+    width: 20px;
+    margin-right: 5px;
+  }
+}
+@media screen and (min-width: 900px) {
+  body{
+    background-color: #02010a;
+  }
+  .contenido{
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  header{
+    height: 40px;
+    background-color: #5b7989;
+    color: white;
+    padding: 1em;
+    border-radius: 10px 10px 0 0;
+    animation: intro 1s;
+  }
+  header h1{
+    text-shadow: 0 0 2px #02010a;
+    color: white;
+    float: left;
+  }
+  header a{
+    color: white;
+  }
+  nav{
+    font-size: 23px;
+    float: right;
+  }
+  nav li{
+    display: inline-block;
+  }
+  section{background-color: #d5c75f;}
+  .active{text-decoration: none;}
+  .central{background-color: #82c3a6;}
+  .central img{
+    width: 90%;
+    height: 400px;
+    margin: 2em 5%;
+  }
+  .secundario{
+    background-color: #d5c75f;
+    display: flex;
+  }
+  .paisajes,.retratos{width: 50vw; text-align: center;}
+  .paisajes img,.retratos img{
+    width: 90%;
+    margin: 1em 5%;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    border: 1px solid black;
+    box-shadow: 0 0 2px #02010a;
+  }
+  .paisajes img:hover{
+    transform: rotate(10deg);
+    box-shadow: 2px 2px 40px #82c3a6;
+    border: 2px solid #82c3a6;
+  }
+  .gallery{
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .image{
+    width: 33.3%;
+  }
+  .image:nth-child(1) img{filter: blur(10px);}
+  .image:nth-child(2n+2) img{filter: grayscale(100%);}
+  .image:nth-child(3) img{filter: sepia(90%);}
+  .image img{
+    width: 80%;
+    margin: 1em 10%;
+  }
+  .retratos img:hover{
+    transform: translate(20px,-5px);
+    box-shadow: 2px 2px 40px #82c3a6;
+    border: 2px solid #82c3a6;
+  }
+  footer{
+    border-radius: 0 0 10px 10px;
+    background-color: #C6d5c5;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  footer ul{
+    width: 20%;
+    margin: 2%;
+  }
+  footer ul:first-child{margin-left: 5%;}
+  footer ul li{
+    list-style: none;
+    font-size: 16px;
+  }
+  footer ul li:nth-of-type(1){
+    font-size: 28px;
+    font-weight: bold;
+  }
+  footer img{
+    width: 20px;
+    margin-right: 5px;
+  }
+}
